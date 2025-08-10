@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- class="tam-ekran-ortala" ekliyoruz -->
+    <div id="site-icerigi" class="tam-ekran-ortala">
+        <h1>Halil'i Öldürmek mi İstiyorsun?</h1>
+        <p>CEVAP</p> <!--KOD5:xc4hg04tn-->
+        <button id="ilk-evet-btn">EVET</button> <!-- BUTONA ID VERDİK -->
+        <span class="gizli-kod-1">KOD1:nıubupş45</span>
+    </div>
+
+    <!-- class="tam-ekran-ortala" ve class="gizli" ekliyoruz -->
+    <div id="soru-1" class="tam-ekran-ortala gizli">
+        <h2>CEVAP</h2>
+        <p>Emin misin<span id="soru-isareti">?</span></p>
+        <button>EVET</button>
+        <button>HAYIR</button>
+    </div>
+
+    <div id="soru-2" class="tam-ekran-ortala gizli">
+        <h2>Neden?</h2>
+        <textarea placeholder="..."></textarea>
+        <button id="gonder-btn">CEVAP</button>
+    </div>
+
+    <!-- YENİ EKLENEN ANİMASYON KATMANI -->
+    <div id="animasyon-katmani" class="tam-ekran-ortala gizli">
+        <h1>AMACIN UYGUN GÖRÜLDÜ</h1>
+        <span class="gizli-kod-3">KOD3:urtbg3gf</span>
+     </div>
+
+    <!-- class="tam-ekran-ortala" ekliyoruz -->
+    <div id="hata-sayfasi" class="tam-ekran-ortala">
+        <h1>404</h1>
+        <p>Not Found</p>
+    </div>
+
+    <div id="soru-3" class="tam-ekran-ortala gizli">
+        <h2>CEVAP</h2>
+        <p>3 HâLİl sEç.</p>
+        
+        <div class="resim-tablosu">
+            <!-- Resimler buraya JavaScript ile eklenecek -->
+        </div>
+
+        <button id="resim-dogrula-btn">DOĞRULA</button>
+        <p id="resim-hata-mesaji" class="gizli">YANLIŞ SEÇİM!</p>
+    </div>
+
+    <div id="soru-4" class="tam-ekran-ortala gizli">
+        <h2>YAKALA↑</h2>
+        <button id="refleks-baslat-btn">BAŞLA</button>
+        <h1 id="refleks-mesaji" class="gizli"></h1>
+    </div>
+
+    <div id="soru-5" class="tam-ekran-ortala gizli">
+        <h2>SON TEST</h2>
+        <p>Bu sitede gizli 5 kodu bul ve buraya yaz.</p>
+        <div id="kod-giris-alani">
+            <input type="text" class="kod-kutusu" maxlength="10">
+            <input type="text" class="kod-kutusu" maxlength="10">
+            <input type="text" class="kod-kutusu" maxlength="10">
+            <input type="text" class="kod-kutusu" maxlength="10">
+            <input type="text" class="kod-kutusu" maxlength="10">
+        </div>
+        <button id="kod-dogrula-btn">SİSTEMİ AÇ</button>
+        <p id="kod-hata-mesaji" class="gizli">KODLAR YANLIŞ. ERİŞİM REDDEDİLDİ.</p>
+    </div>
+
+    <div id="final-ekrani" class="tam-ekran-ortala gizli">
+        <h1>Onu öldüremezsin ki seni şapşal :)</h1>
+        <div class="kedi-resimleri">
+            <img src="https://media.tenor.com/HsT2hrwNDkcAAAAi/maxwell-cat.gif" alt="Dans Eden Kedi">
+            <img src="https://media.tenor.com/HLU81hLh_zUAAAAj/cat-falling.gif" alt="Komik Kedi">
+            <img src="https://media1.tenor.com/m/dQTVS4CkN_QAAAAd/ballsdex-ballsdexkot.gif" alt="Şaşkın Kedi">
+        </div>
+    </div>
+    
+    <audio id="arkaplan-muzik" src="resimler/arkaplan.mp3" loop></audio>
+    <audio id="bomba-ses" src="resimler/bomba_belirme.mp3"></audio>
+    <audio id="patlama-ses" src="resimler/patlama.mp3"></audio>
+    <audio id="final-muzik" src="resimler/final_muzigi.mp3" loop></audio>
+
+    <script src="script.js"></script> 
+</body>
+</html>

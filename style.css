@@ -1,0 +1,156 @@
+/* YENİ YARDIMCI SINIFIMIZ */
+.tam-ekran-ortala {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hata-sayfasi {
+    display: none; 
+    background-color: black;
+    z-index: 9999;
+}
+
+.gizli {
+    display: none;
+}
+
+/* --- body kuralı aynı kalacak --- */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#animasyon-katmani {
+    background-color: black;
+    /* Yazının parlaması için bir gölge efekti */
+    text-shadow: 0 0 15px white;
+    font-size: 2em; /* Yazıyı normalin 2 katı büyütelim */
+}
+#soru-2 textarea {
+    /* Boyutlandırma */
+    width: 350px;  /* Genişlik 300 piksel olsun */
+    height: 120px; /* Yükseklik 150 piksel olsun */
+
+    /* Görünüm İyileştirmeleri */
+    font-family: 'Courier New', Courier, monospace; /* Yazı tipi aynı kalsın */
+    border: 1px solid white; /* Etrafına 1 piksellik beyaz bir çerçeve */
+    padding: 10px; /* İçeriden 10 piksellik boşluk (yazı kenara yapışmasın) */
+    font-size: 1em; /* Yazı boyutu normal olsun */
+    margin-bottom: 20px; /* Altındaki butonla arasına 20 piksel boşluk koy */
+}
+.resim-tablosu {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 sütun, her biri 100px genişliğinde */
+    grid-template-rows: repeat(3, 100px);    /* 3 satır, her biri 100px yüksekliğinde */
+    gap: 10px; /* Resimler arası 10px boşluk */
+    margin: 20px 0; /* Tablonun üstü ve altıyla arasına boşluk koy */
+}
+
+.resim-kutusu {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border: 2px solid #555;
+    cursor: pointer; /* Farenin üzerine gelince el işareti çıksın */
+    transition: all 0.2s; /* Tüm değişiklikler 0.2 saniyede, yumuşak olsun */
+}
+
+.resim-kutusu:hover {
+    border-color: white; /* Farenin üzerine gelince çerçeve beyaz olsun */
+}
+
+.resim-kutusu.secili {
+    border-color: #00ff00; /* Seçili resmin çerçevesi parlak yeşil olsun */
+    transform: scale(1.05); /* Seçilince hafifçe büyüsün */
+}
+
+#bomba-resmi {
+    position: absolute; /* Konumunu diğer elemanlardan bağımsız, ekrana göre ayarlar */
+    width: 150px;       /* Bombanın genişliği */
+    height: 150px;      /* Bombanın yüksekliği */
+    cursor: pointer;    /* Farenin üzerine gelince tıklanabilir olduğunu belirten el işareti çıkar */
+}
+.gizli-kod-1 {
+    position: absolute; /* Konumunu üst elemana göre ayarla */
+    right: 20px; /* Sağ kenardan 20 piksel içeride */
+    top: 50%; /* Dikey olarak tam ortada */
+    transform: translateY(-50%); /* Dikey hizalamayı mükemmelleştir */
+    color: black; /* Arka planla aynı renk */
+
+}
+/* YENİ VE SİHİRLİ KISIM */
+.gizli-kod-1::selection {
+    color: white; /* SEÇİLDİĞİNDE yazı rengi BEYAZ olsun */
+    background-color: #333; /* SEÇİLDİĞİNDE arka plan rengi KOYU GRİ olsun */
+}
+#soru-isareti {
+    cursor: pointer;
+    font-weight: bold; /* Biraz daha belirgin olsun */
+}
+.gizli-kod-3 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #010101; /* Siyahtan neredeyse ayırt edilemez */
+    font-size: 0.8em; /* Daha küçük, daha gizli */
+}
+#kod-giris-alani {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.kod-kutusu {
+    width: 120px; /* Kutuları biraz daha genişlettim */
+    height: 70px;
+    background-color: #222;
+    border: 2px solid #555;
+    color: white;
+    font-size: 1.2em; /* Yazıyı biraz küçülttüm ki sığsın */
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#final-ekrani h1 {
+    font-size: 2.5em;
+    color: #ff9ff3; /* Tatlı bir pembe */
+    text-shadow: 0 0 10px #ff9ff3, 0 0 20px white; /* Pembe ve beyaz parıltı */
+    margin-bottom: 20px;
+}
+
+.kedi-resimleri {
+    display: flex;
+    gap: 25px; /* Resimlerin arası biraz daha açık olsun */
+    margin-bottom: 30px;
+}
+
+.kedi-resimleri img {
+    width: 150px;
+    height: 150px;
+    border: 4px solid white;
+    border-radius: 50%; /* Resimleri yuvarlak yap */
+    object-fit: cover; /* Resmin orantısını bozmadan yuvarlağı doldur */
+    box-shadow: 0 0 25px #ff9ff3; /* Resimlerin etrafına da pembe bir parıltı */
+}
+#final-ekrani {
+    /* DEV BİR GÖKKUŞAĞI ARKA PLANI OLUŞTURUYORUZ */
+    background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff, #ff0000);
+    background-size: 400% 400%; /* Arka planı devasa yapıyoruz */
+
+    /* ANİMASYONU UYGULUYORUZ */
+    animation: gokkusagiAnimasyonu 10s ease infinite;
+}
+
+/* ANİMASYONUN KENDİSİNİ TANIMLIYORUZ */
+@keyframes gokkusagiAnimasyonu {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
