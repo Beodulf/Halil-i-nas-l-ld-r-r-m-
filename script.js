@@ -18,7 +18,7 @@ const anlikSaat = new Date().getHours();
 // "if", bir koşul başlatır. "Eğer parantez içindeki şey doğruysa, süslü parantezlerin içini yap" demektir.
 // Koşulumuz: "anlikSaat" değişkeni 0'dan küçükse VEYA (|| işareti "veya" anlamına gelir) "anlikSaat" değişkeni 3'ten büyük veya eşitse...
 // Bu, sitenin kapalı olmasını istediğimiz zaman dilimini (00:00-03:00 DIŞINDAKİ tüm saatler) kontrol eder.
-if (anlikSaat < 0 || anlikSaat >= 23) {
+if (anlikSaat < 0 || anlikSaat >= 3) {
     // Bu koşul doğruysa (yani site kapalıysa) aşağıdaki kodlar çalışır:
 
     // "document", o anki HTML sayfasının tamamını temsil eden bir nesnedir.
@@ -335,4 +335,5 @@ kodDogrulaBtn.addEventListener('click', () => {
         kodHataMesaji.classList.remove('gizli');
         setTimeout(() => kodHataMesaji.classList.add('gizli'), 2000);
     }
+
 });
